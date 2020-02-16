@@ -9,7 +9,11 @@ then
 else
 	echo "Setup directory not found! Creating it"
 	mkdir $INSTALLATION_DIR
-	if [[ $0 != 0 ]]; then echo "Could not create installation folder, exiting"; exit; fi
+	if [[ $0 != 0 ]];
+	then 
+		echo "Could not create installation folder, restarting"
+		./main.sh && exit 
+	fi
 fi
 
 ./installations.sh
