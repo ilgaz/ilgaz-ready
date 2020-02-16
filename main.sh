@@ -19,4 +19,9 @@ fi
 ./installations.sh
 ./clone.sh
 
+# Change default shell to zsh
+chsh -s "/bin/zsh"
+
+echo "You're going to need to reboot in order to have zsh as your default shell"
+
 echo "Jobs done!"
